@@ -1,4 +1,4 @@
-{
+var folderIndex = {
   'logs':{
     'nov_2_65.txt':`Greeting, Astronaut! If you're reading this that means you got handed a keycard at the beginning of your check in. That keycard can be used to access test shaft Floyd Warda, where you will be testing the [redacted] for the remainder of your stay here at Aperture Science. Please take the next left and descend down the stairs, once you arrive in front of the airlock an Aperture Science Employee will provide instructions and remind you of the safety procedures.`,
     'jan_5_64.txt':`Aperture Science Innovators is proud to announce the opening of test shaft Floyd Warda which centers itself around the Aperture Science [redacted]. You and your family can enjoy mind boggling puzzles for the low price of $199! So, what are you waiting for! Come on down to Floyd Warda, and enjoy your stay at Aperture Science!
