@@ -6,6 +6,7 @@ var validIndex = 0
 var typingPW = false
 var onSubmit = function(){}
 var helpRan = 0
+var screenRestorePoint = ''
 var currentPath = []
 
 var userCanType = false
@@ -33,6 +34,7 @@ function prepCommand() {
     addHTML('\n')
     //Econsole.insertAdjacentHTML('beforeend', '<br>>>>');
   addHTML('>>>')
+  screenRestorePoint = Econsole.innerHTML
   //Econsole.innerText += '>>>'
 }
 
@@ -193,7 +195,8 @@ function awaitCommand() {
       Econsole.innerHTML += '<br>-----------------------<br>'
       addHTML(cFolder[args[0]])
       onSubmit = function(){
-        clearConsole()
+        Econsole.innerHTML = screenRestorePoint
+        //clearConsole()
         prepCommand()
         awaitCommand()
       }
@@ -277,10 +280,10 @@ cd <path>: move to a specified directory
         }
         let asplit
         if (!args[1].startsWith('/'))
-          asplit = currentPath.concat(args[1].slice(2,args[1].length).split('/'))
+          asplit = currentPath.concat(args[1].split('/'))
         else
-          asplit = args[1].split('/')
-        console.log(asplit)
+          asplit = args[1].endsWith('/') ? args[1].slice(1,-1).split('/') : args[1].slice(1).split('/')
+        //console.log(asplit)
         let cfol = folderIndex
         if (filesAtFolder(asplit) == undefined)
           return 'ERR: Invalid directory!'
