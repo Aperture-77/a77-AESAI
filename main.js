@@ -135,7 +135,7 @@ document.onkeydown = function(e){
         alert('Reading clipboard data is disabled in your browser!')
         return
       }
-      appendTxt(navigator.clipboard.readText())
+      navigator.clipboard.readText().then(clipText=>{appendTxt(clipText)})
     }
     return;
   }
@@ -262,27 +262,6 @@ cd <path>: move to a specified directory
 <path>: open the file specified
 `   ,5,function(){cback()},true)
     else {
-      if (args[1] == 'me')
-        helpRan += 1
-        if (helpRan == 3) {
-          clearConsole()
-          setTimeout(function(){
-            slowType('I can help you.',100,function(){
-              prepCommand()
-              awaitResponse(false,function(){
-                slowType('But only if you help me too.',100,function(){
-                  prepCommand()
-                  awaitResponse(false,function(){
-                    slowType('Please',500,function(){
-                      clearConsole();cback()
-                    })
-                  })
-                },true)
-              })
-            },true)
-          },1000)
-          return;
-        }
       return 'ERR: Expected 0 arguments, given 1.'
     }
     },
@@ -297,7 +276,7 @@ cd <path>: move to a specified directory
           return '';
         }
         let asplit
-        if (args[1].startsWith('./'))
+        if (!args[1].startsWith('/'))
           asplit = currentPath.concat(args[1].slice(2,args[1].length).split('/'))
         else
           asplit = args[1].split('/')
