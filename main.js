@@ -211,7 +211,7 @@ function awaitCommand() {
 
 function initiateLogin() {
   login(function(x,y){
-    if (x == 'admin' && y == 'test') {
+    if (x.toLowerCase() == 'craig' && y == '4561') {
       clearConsole()
       setHeaderVisible('',false)
       consoleHeader.innerHTML = " "
