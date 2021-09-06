@@ -189,7 +189,7 @@ function awaitCommand() {
       if (res != undefined)
         cb()
     }
-    else if (Object.keys(cFolder).includes(args[0])) {
+    else if (Object.keys(cFolder).includes(args[0]) && cFolder[args[0]].constructor.name === 'String' ) {
       clearConsole()
       addHTML('Reading '+(currentPath.join('/'))+'/'+args[0])
       Econsole.innerHTML += '<br>-----------------------<br>'
