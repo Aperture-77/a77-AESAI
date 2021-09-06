@@ -18,8 +18,7 @@ folderIndex = {
     'jan_21_65.txt':`Aperture Science is happy to announce that all spots on the application form have been taken! We currently have 12 enlisted astronauts, two of which are ready to test the [redacted]. Aperture Science would also like to address the concerns the public have over this experiment. Don't worry, the [redacted] has been tested and it works fine and is completely safe 50% of the time. That's a 25% increase since it was last opened to the public!`,
     'aug_19_69.txt':`Aperture Science regrets to report that the Aperture Science [redacted] experiment did not go as planned. This will result in the condemnation of test shaft Kilo Franklin and the 1960s branch of the facility. However, don't be alarmed, Aperture is doing just fine financially and will continue it's experiments in the coming years.`
   },
-  'credits.txt':`APERTURE 77 ARG
-
+  'credits.txt':`APERTURE 77 - AESAI INTERACTIVE INTERFACE
 Website created by Baguettery
 Content written by Terrorcows`
 }
