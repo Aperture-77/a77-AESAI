@@ -125,8 +125,13 @@ body {
   position:fixed;
   left:0;
   top:0;
+  /* Image-based overlay. Swapped in favor of gradient abuse for better rendering. */
+  /*
   background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAEAgMAAAAytr2pAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAAAAAAAAAg2PpwAAAAAN0Uk5TQv8AGkxgAgAAABBJREFUeJxjYGBwYGBgaAAAAcgAwe8++yUAAAAASUVORK5CYII=');
   background-size: 0.8px;
+  */
+  background: linear-gradient(0deg, var(--color-bkg) 30%, #0000 30%);
+  background-size: 100% 3px;
   opacity:0.2;
   image-rendering: crisp-edges;
   pointer-events : none;
