@@ -1,3 +1,3 @@
 # console webapp
 
-[App link](https://terrorcows.github.io/a77-AESAI)
+[App link](https://aperture-77.github.io/a77-AESAI/)
