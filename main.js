@@ -274,6 +274,10 @@ cd <path>: move to a specified directory
     'action':function(args,cback){
       if (args.length > 1) {
         //return 'ERR: Not implemented ya twat.'
+        if (args[1] == '../') {
+          currentPath.pop()
+          return '';
+        }
         if (args[1] == '/') {
           currentPath = []
           return '';
